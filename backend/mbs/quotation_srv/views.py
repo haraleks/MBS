@@ -27,8 +27,8 @@ def get_quotation(request):
             r = res.json().get("results")
             for k in r.keys():
                 data.append({
-                    "code": r.get(k).get('id') if r.get(k) else None,
-                    "name": r.get(k).get('to') if r.get(k) else None,
+                    "name": r.get(k).get('id') if r.get(k) else None,
+                    "code": r.get(k).get('to') if r.get(k) else None,
                     "price": r.get(k).get('val') if r.get(k) else None,
                     "date": now,
                     "nominal": 1
