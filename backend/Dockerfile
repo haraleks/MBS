@@ -14,5 +14,6 @@ RUN apt update
 # copy project
 COPY . $MICRO_SERVICE
 RUN pip install -r requirements.txt
-
+RUN echo $(ls -alh)
+RUN ls -alh
 CMD ["/bin/bash", "/opt/entrypoint.sh"]
